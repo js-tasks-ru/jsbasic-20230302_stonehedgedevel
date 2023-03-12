@@ -1,3 +1,11 @@
 function sumSalary(salaries) {
-  // ваш код...
+  let totalSum = 0;
+
+  Object.values(salaries).forEach((value) => {
+    if (isFinite(value)) {
+      totalSum += value;
+    }
+  });
+
+  return totalSum;
 }
